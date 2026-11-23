@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Fan-out discipline",
+    "description": "Injects a short resident rule set that makes the agent judge parallelizable sub-lines before starting and spawn subagents instead of serializing independent work."
+  }
+}

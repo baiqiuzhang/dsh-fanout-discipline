@@ -1,0 +1,5 @@
+- insert:
+    - id: dsh-fanout-discipline
+      name: dsh-fanout-discipline
+      config:
+        enabled: true

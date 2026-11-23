@@ -1,0 +1,60 @@
+{
+  "name": "dsh-fanout-discipline",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Resident fan-out discipline for DeepSeek Harness: every session gets a short prompt section telling the model to judge parallelizable sub-lines before starting and to spawn subagents instead of serializing independent work.",
+  "license": "MIT",
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "subagent",
+    "fan-out",
+    "parallel"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.1 <0.2.0 || >=0.2.0 <0.3.0-0 || >=0.2.2-0 <0.3.0-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "author": "baiqiuzhang",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baiqiuzhang/dsh-fanout-discipline.git"
+  },
+  "homepage": "https://github.com/baiqiuzhang/dsh-fanout-discipline#readme",
+  "bugs": {
+    "url": "https://github.com/baiqiuzhang/dsh-fanout-discipline/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dshhub": {
+    "schemaVersion": 1,
+    "displayName": "Fan-out discipline",
+    "summary": "Injects a resident prompt section that makes the agent judge parallelizable sub-lines before starting and spawn subagents instead of serializing independent work.",
+    "tags": [
+      "subagent",
+      "fan-out",
+      "parallel",
+      "prompt"
+    ]
+  }
+}

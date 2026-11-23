@@ -1,5 +1,7 @@
 # dsh-fanout-discipline
 
+**[English](README.en.md) | 中文**
+
 DSH 没有「自动开子代理」的开关——是否 fan-out 完全取决于模型对任务结构的判断。这个插件把最硬的 5 条判断做成**常驻 system prompt 段**，每个会话、每个 preset 都生效，不依赖模型记得读 `AGENTS.md`。
 
 ## 它做什么
